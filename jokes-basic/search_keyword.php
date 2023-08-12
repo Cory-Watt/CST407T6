@@ -7,7 +7,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-        $(function() {
+        $(function () {
             $("#accordion").accordion();
         });
     </script>
@@ -37,14 +37,14 @@ if ($result->num_rows > 0) {
     // output data of each row
 
     echo "<div id='accordion'>";
-    while($row = $result->fetch_assoc()) {
+    while ($row = $result->fetch_assoc()) {
         $safe_joke_question = htmlspecialchars($row['Joke_question']);
         $safe_joke_answer = htmlspecialchars($row['Joke_answer']);
         $username = $row['user_name'];
 
         echo "<h3>" . $safe_joke_question . "</h3>";
-        
-        echo "<div><p>" . $safe_joke_answer  . " -- Submitted by user " . $username ."</p></div>";
+
+        echo "<div><p>" . $safe_joke_answer . " -- Submitted by user " . $username . "</p></div>";
     }
 
     echo "</div>";

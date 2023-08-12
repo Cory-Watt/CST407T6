@@ -28,12 +28,12 @@ echo "SQL = SELECT user_id, user_name, password FROM users WHERE user_name = ? A
 // Fetch the results
 if ($stmt->fetch()) {
     // Log the user in
-    echo "<p>Login success</p>"; 
+    echo "<p>Login success</p>";
     $_SESSION['user_name'] = $retrieved_user_name;
     $_SESSION['userid'] = $user_id;
 } else {
     echo "Login failed.<br>";
-    $_SESSION =  [];
+    $_SESSION = [];
     session_destroy();
 }
 
